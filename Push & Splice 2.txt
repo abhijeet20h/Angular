@@ -1,0 +1,56 @@
+html-->
+
+<div class="container">
+  <br />
+  <div class="row">
+    <div class="col-md-3">
+      <input type="text" class="form-control" #username placeholder="UserName" />
+    </div>
+    <div class="col-md-3">
+      <button (click)="onCreateuser(username)"  class="btn btn-success" >Creat User</button>
+    </div>
+    <div class="col-md-3">
+        <button (click)="onRemoveUser()"  class="btn btn-danger" >Remove</button>
+      </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-md-10">
+      <table class="table">
+        <thead class="table-dark">
+          <tr>
+            <th>UserName</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users ; index as i">
+            <td>{{user.name}}</td>
+            <td><button (click)="onremove(i)" class="btn btn-danger">Remove User</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+Ts-->
+
+
+
+users=[]
+
+onCreateuser(username){
+this.users.push({
+  name:username.value
+});
+}
+onRemoveUser(){
+  this.users.splice(this.users.length -1);
+}
+
+onremove(item){
+this.users.splice(item , 1);
+}
