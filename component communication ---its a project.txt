@@ -1,0 +1,177 @@
+<div class="container a">
+  <div class="border mt-3">
+    <h1 class="text-center bg-success py-2 text-white">Buy Products</h1>
+    <div
+      class="alert alert-light border mt-4 d-flex"
+      role="alert"
+      *ngIf="addedProdect"
+    >
+      <strong class="text-success">{{ addedProdect }}</strong> &nbsp; Is
+      Selected and Added In Cart
+      <button class="btn btn-success" style="margin-left: auto">
+        Checkout
+      </button>
+    </div>
+    <div class="row mt-5 wow slideInLeft">
+      <div class="col text-center">
+        <div class="card" style="width: 18rem">
+          <img
+            src="assets/images/tv.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">TV</h5>
+            <button class="btn btn-primary" (click)="onselectProduct('TV')">
+              SELECT THIS PRODUCT
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col text-center">
+        <div class="card" style="width: 18rem">
+          <img
+            src="assets/images/wm.jfif"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Washing Machine</h5>
+            <button class="btn btn-primary" (click)="onselectProduct('Washing Machine')">
+              SELECT THIS PRODUCT
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col text-center">
+        <div class="card" style="width: 18rem">
+          <img
+            src="assets/images/ht.jfif"
+            class="card-img-top"
+            alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Home Theater</h5>
+            <button class="btn btn-primary" (click)="onselectProduct('Home Theater')">
+              SELECT THIS PRODUCT
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col text-center">
+        <div class="card" style="width: 18rem">
+          <img
+            src="assets/images/key.jfif"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Keyboard</h5>
+            <button class="btn btn-primary" (click)="onselectProduct('Keyboard')">
+              SELECT THIS PRODUCT
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row my-2 wow slideInRight">
+      <div class="col text-center">
+        <div class="card" style="width: 18rem">
+          <img
+            src="assets/images/refri.jfif"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Refrigerator</h5>
+            <button class="btn btn-primary" (click)="onselectProduct('Refrigerator')">
+              SELECT THIS PRODUCT
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col text-center">
+        <div class="card" style="width: 18rem">
+          <img
+            src="assets/images/headphones.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Headphones</h5>
+            <button class="btn btn-primary" (click)="onselectProduct('Headphones')">
+              SELECT THIS PRODUCT
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col text-center">
+        <div class="card" style="width: 18rem">
+          <img
+            src="assets/images/pexels-pok-rie-132037.jpg"
+            class="card-img-top"
+            alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Speaker</h5>
+            <button class="btn btn-primary" (click)="onselectProduct('Speaker')">
+              SELECT THIS PRODUCT
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col text-center">
+        <div class="card" style="width: 18rem">
+          <img
+            src="assets/images/mem.jfif"
+            class="card-img-top"
+            alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Memory Card</h5>
+            <button class="btn btn-primary" (click)="onselectProduct('Memory Card')">
+              SELECT THIS PRODUCT
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-12 text-center py-2 bg-success text-white mb-4">
+      <h2 *ngIf="!productSelected">Select Any Product</h2>
+      <h2 *ngIf="productSelected">
+        {{ productSelecteddisplayhere }} is Selected
+      </h2>
+      <button class="mt-3 btn-lg" (click)="addProdect()">ADD TO CART</button>
+    </div>
+  </div>
+</div>
+
+
+
+Ts-->
+
+
+productSelected:boolean=false;
+productSelecteddisplayhere:string;
+addedProdect:any;
+
+onselectProduct(product){
+  this.productSelected=true;
+  this.productSelecteddisplayhere=product;
+}
+
+addProdect(){
+  this.addedProdect= this.productSelecteddisplayhere;
+}
+
+
+
+CSS-->
+
+.a{
+    background-color: rgb(221, 221, 221);
+}
+.card img{
+    height: 150px;
+    width: 300px;
+}
+
+
