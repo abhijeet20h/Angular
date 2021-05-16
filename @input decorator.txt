@@ -1,0 +1,25 @@
+import { Component, Input,Output,EventEmitter, OnInit } from '@angular/core';
+
+
+Child====================>
+
+@Input() myinput:string
+
+name:string;
+q(){
+this.name= this.myinput;
+}
+
+
+
+<button (click)="q()">click child</button>
+
+{{name}}
+
+
+
+Parent==================>
+
+prop:string='THIS IS PARENT';
+
+<app-child [myinput]="prop" >  </app-child>
