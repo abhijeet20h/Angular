@@ -1,0 +1,27 @@
+Output Decorator :
+
+================
+
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+
+Child========================>
+
+@Output() property1= new EventEmitter<string>();
+property2 ="Message from child";
+sendData(){
+  this.property1.emit(this.property2)
+}
+
+
+<button (click)="sendData()">send from child</button>
+
+Parent========================>
+
+
+property1:string;
+parentfun(value){
+this.property1=value;
+}
+
+<app-child (property1)="parentfun($event)"></app-child> <br>
+======================================================================================================================
