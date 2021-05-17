@@ -1,0 +1,41 @@
+Directive is a way to extend our HTML including both view as well as behaviour
+
+2. Directives are used to extend the power of HTML 
+
+3. Mainly 3 types of directives 
+
+    Component Directive 
+
+    Structural Directive 
+        ngIf
+        ngFor
+        ngSwitch
+
+    Attribute Directive 
+        ngClass
+        ngStyle 
+
+4. Examples 
+    AppComponent -> Componnt Directive 
+
+
+
+- Structrual Directives 
+
+1. Structrual Directives will help us in extending, adding or removing elements from the HTML page 
+
+2. DOM Mainupulation 
+
+3. 3 types of Structrual Directives
+
+    ngIf
+    ngFor
+    ngSwitch 
+
+4. asterisk (*) means its a built in Structrual directive 
+
+E.g ngIf 
+    <div *ngIf="<condition>"> Value 1</div> 
+
+
+
