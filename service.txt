@@ -1,0 +1,16 @@
+Services in Angular:
+- A service is a typescript class which contains businuss logic which can be reused in the application by injecting into component.
+- In Angular service will contain reusable functions,which we can inject into components, directives and also Pipes.
+- Services follow singleton pattern, which means one object is created and same object  is used in every request of service.
+- In Angular to create a service we use "@Injectable()".
+- Using Angular CLI to create a service we use "ng g s <servicename>".
+- We can inject the service in 3 ways
+    - Global(Angular 8)
+    - Module Level
+    - Component Level
+
+
+1. Verify Captcha value and User entered Captch in textbox Both are same or not. If different then Display an alert message using bootstrap.
+2. If Captcha is then cross verfiy Username and Password by creating some data in Service and validate user input.
+3. If above two conditions success then display success alert.
+4. If any condition failed display that related message.
